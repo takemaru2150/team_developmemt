@@ -1,5 +1,5 @@
 {
-  "name": "Airbnb_1",
+  "name": "codevillage_site",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -20,5 +20,7 @@
   },
   "dependencies": {
     "jquery": "^3.4.1"
-  }
+  },
+  "repository": "https://github.com/takemaru2150/team_developmemt.git",
+  "author": "masashi hiratsuka <hoop0911@icloud.com>"
 }
