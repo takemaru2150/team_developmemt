@@ -2,6 +2,8 @@
   "name": "codevillage_site",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/takemaru2150/team_developmemt.git",
+  "author": "sakurai <takeshi2jp1000@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "css-loader": "^2.1.1",
@@ -15,12 +17,16 @@
     "webpack-dev-server": "^3.5.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --open --open-page header.html",
     "build": "webpack --watch --config webpack.config.js"
+<<<<<<< HEAD:package.json
   },
   "dependencies": {
     "jquery": "^3.4.1"
   },
   "repository": "https://github.com/takemaru2150/team_developmemt.git",
   "author": "masashi hiratsuka <hoop0911@icloud.com>"
+=======
+  }
+>>>>>>> feb837a7c0f96b73ed58e643a84eeba40ce79e5a:toppage/header_contents/package.json
 }
