@@ -1,4 +1,36 @@
+$pc: 1162px;
+$tab: 994px;
+$sp: 657px;
+
+$header-height: 60px;
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+
+
+
+
+
 main {
+
+    width: 79%;
+
+
 
     #title {
         padding-left: 30px;
@@ -27,6 +59,28 @@ main {
         position: relative;
         top: -6px;
     }
+    
+    // ミドルのコーディング
+
+
+    #midle-wrapper {
+        
+        padding: 30px ; 
+
+
+        #midle {
+            width: 532px;
+            height: 333px;
+            background-color: grey;
+            display: block;
+            padding-top: 10px;
+        }
+
+    }
+
+
+
 
     
 }
+
