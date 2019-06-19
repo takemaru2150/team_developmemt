@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"main h2 {\\n  color: red; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"main #title {\\n  padding-left: 30px; }\\n\\nmain #new {\\n  font-size: 20px;\\n  padding: 30px 0 0 0;\\n  font-weight: bold; }\\n\\nmain #recent {\\n  font-size: 14px;\\n  padding: 25px 0 30px 0;\\n  color: grey;\\n  border-bottom: 6px solid grey;\\n  width: 1063px; }\\n\\nmain #navy {\\n  height: 6px;\\n  width: 310px;\\n  background-color: navy;\\n  display: block;\\n  position: relative;\\n  top: -6px; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 
