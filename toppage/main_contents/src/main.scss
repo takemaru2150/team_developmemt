@@ -65,7 +65,7 @@ main {
 
 
     #midle-wrapper {
-        
+        display: flex;
         padding: 30px ; 
 
 
@@ -79,7 +79,7 @@ main {
 
 
         #text1 {
-
+            height: 333px;
             width: 100px;
 
             #date {
@@ -97,9 +97,27 @@ main {
             #contents {
                 width: 506px;
                 height: 198px;
-                font-size: 14px;
-                // line-height: 
+                font-size: 17px;
+                // line-height: 70px; 
+                padding-top: 30px;
             }
+
+            #student{
+
+                width: 119px;
+                height: 27px;
+                text-align: center;
+                background-color: orange;
+
+
+                #voice {
+                    font-size: 12px;
+                    position: relative;
+                    top: 8px;
+                    color: white;
+                }
+            }
+
 
 
         }
