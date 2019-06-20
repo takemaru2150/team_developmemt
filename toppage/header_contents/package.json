@@ -2,6 +2,8 @@
   "name": "codevillage_site",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/takemaru2150/team_developmemt.git",
+  "author": "sakurai <takeshi2jp1000@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "css-loader": "^2.1.1",
@@ -17,5 +19,8 @@
   "scripts": {
     "start": "webpack-dev-server --open --open-page header.html",
     "build": "webpack --watch --config webpack.config.js"
-}
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
 }
