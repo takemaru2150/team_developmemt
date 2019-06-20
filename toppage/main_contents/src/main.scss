@@ -23,11 +23,8 @@ $header-height: 60px;
 
 
 
-
-
-
 main {
-
+    
     width: 79%;
 
 
@@ -59,8 +56,12 @@ main {
         position: relative;
         top: -6px;
     }
+
+
     
     // ミドルのコーディング
+
+
 
 
     #midle-wrapper {
@@ -76,7 +77,38 @@ main {
             padding-top: 10px;
         }
 
+
+        #text1 {
+
+            width: 100px;
+
+            #date {
+                font-size: 12px;
+                padding: 10px 0 20px 0;
+                color: grey;
+            }
+
+            h2 {
+                font-size: 16px;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            #contents {
+                width: 506px;
+                height: 198px;
+                font-size: 14px;
+                // line-height: 
+            }
+
+
+        }
+
     }
+
+
+
+
 
 
 
