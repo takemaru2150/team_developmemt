@@ -1,4 +1,37 @@
+$pc: 1162px;
+$tab: 994px;
+$sp: 657px;
+
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+
+
 main {
+    
+    width: 79%;
+
+    #date {
+        position: relative;
+        top: -10px;
+    }
+
+
 
     #title {
         padding-left: 30px;
@@ -16,7 +49,7 @@ main {
         padding: 25px 0 30px 0;
         color: grey;
         border-bottom: 6px solid grey;
-        width: 1063px;
+        width: 1110px;
     }
 
     #navy {
@@ -26,8 +59,282 @@ main {
         display: block;
         position: relative;
         top: -6px;
+    }
+
+
+    
+    // ミドルのコーディング
+
+@mixin span {
+    background-color: grey;
+    display: block;
+}
+
+
+    #midle-wrapper {
+        display: flex;
+        padding: 30px; 
+       
+
+        #midle {
+            width: 532px;
+            height: 333px;
+            @include span;
+            padding-top: 10px;
+        }
+
+
+        #text1 {
+            height: 333px;
+            width: 100px;
+            padding-left: 20px;
+
+
+            #date {
+                font-size: 12px;
+                padding: 10px 0 20px 0;
+                color: grey;
+            }
+
+            #real {
+                font-size: 16px;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            #contents {
+                width: 506px;
+                height: 198px;
+                font-size: 17px;
+                line-height: 1.2; 
+                padding-top: 30px;
+                // text-align: center;
+            }
+
+            #student {
+
+                width: 119px;
+                height: 27px;
+                text-align: center;
+                background-color: orange;
+                position: relative;
+                top: 30px;
+
+
+                #voice {
+                    font-size: 12px;
+                    position: relative;
+                    top: 8px;
+                    color: white;
+                }
+            }
+
+            #more {
+               color: grey;
+               font-size: 12px;
+               position: relative;
+               top: 25px;
+               left: 466px;
+            }
+
+        }
+
+
         
     }
 
+
+
+
+    @mixin contents-span {
+        width: 300px;
+        height: 200px;
+    }
+
+    @mixin date {
+        font-size: 12px;
+        padding: 10px 0 10px 0;
+    }
     
+    @mixin real {
+        padding: 5px 0 10px 0;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    @mixin contents {
+        font-size: 14px;
+        height: 128px;
+        width: 300px;
+        line-height: 1.1;
+    } 
+
+    @mixin fact {
+        width: 119px;
+        height: 27px;
+        margin-top: 30px;
+        background-color: orange;
+    }
+
+    @mixin life($left: 23px) {
+        font-size: 12px;
+        position: relative;
+        top: 8px;
+        left: $left;
+        color: white;
+    }
+
+    @mixin more {
+        color: grey;
+        font-size: 12px;
+        position: relative;
+        top: -28px;
+        left: 260px;
+    }
+    
+    
+    
+    #three-contents {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 30px;
+       
+
+      #first-contents {
+
+          .three-contents {
+    
+    
+              .contents-span {
+                  @include span;
+                  @include contents-span;
+              }
+    
+          }
+
+          
+
+
+          .contents-text {
+              
+            .date {
+                @include date;
+            }
+
+            .real {
+                @include real;
+            }
+
+            .contents {
+                @include contents;
+            }
+
+            .fact {
+                @include fact;
+
+                .life {
+                    @include life;
+                }
+            }
+
+            .more {
+                @include more;
+            }
+
+          }
+
+
+      }
+
+
+
+      #second-contents  {
+
+        .three-contents {
+
+            .contents-span {
+                @include span;
+                @include contents-span;
+            }
+
+        }
+
+        .contents-text {
+
+            .date {
+                @include date;
+            }
+
+            .real {
+                @include real;
+            }
+
+            .contents {
+                @include contents;
+            }
+            .fact {
+                @include fact;
+
+                .life {
+                   @include life(31px);
+                }
+            }
+
+            .more {
+                @include more;
+            }
+        
+      }
+
+
+
+    }
+
+
+    #third-contents {
+
+        .three-contents {
+
+            .contents-span {
+                @include span;
+                @include contents-span;
+            }
+        }
+
+
+        .contents-text {
+
+            .date {
+                @include date;
+            }
+
+            .real {
+                @include real;
+            } 
+
+            .contents {
+                @include contents;
+            }
+
+            .fact {
+                @include fact;
+
+                .life {
+                    @include life(31px);
+                }
+            }
+
+            .more {
+                @include more;
+            }
+        }
+    }
+
+
+
+
+
+    
+}
+
 }
