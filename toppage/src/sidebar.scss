@@ -1,0 +1,353 @@
+// ブレイクポイント
+$pc: 1162px;
+$tab: 994px;
+$sp: 657px;
+$sp-small: 530px;
+$sp-small-2: 400px;
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+@mixin sp-small {
+  @media (max-width: ($sp-small)) {
+    @content;
+  }
+}
+@mixin sp-small-2 {
+  @media (max-width: ($sp-small-2)) {
+    @content;
+  }
+}
+
+// SidebarContainer　スタイル
+@mixin SidebarContainer {
+  border-radius:5px;
+  margin-bottom: 30px;
+}
+
+// SidebarHeadingWrap　スタイル
+@mixin SidebarHeadingWrap {
+  background-color: #1D2D44;
+  border-radius: 5px 5px 0 0;
+  height: 59px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+
+// SidebarHeading　スタイル
+@mixin SidebarHeading {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  padding-left: 9.503%;
+  width: 100%;
+}
+
+// SidebarContentWrap　スタイル
+@mixin SidebarContentWrap {
+  padding: 0 9.503%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+// SidebarContent　スタイル
+@mixin SidebarContent {
+  font-size: 12px;
+  font-weight: 300;
+  padding: 18px 0;
+  border-bottom: dotted 1px #707070;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+// SnsBtn　スタイル
+@mixin SnsBtn {
+  color: #fff;
+  width: 100%;
+  padding: 23px 0;
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 300;
+  display: block;
+  text-align: center;
+
+  @include tab {
+    width: 45%;
+  }
+  @include sp-small-2 {
+    width: 90%;
+    margin: 0 auto 14px;
+  }
+}
+
+
+// --- sidebar メイン ---
+
+
+#sidebar {
+  width: 21%;
+  padding: 0 1.73%;
+  font-family: Verdana,"游ゴシック Medium","Yu Gothic Medium","游ゴシック体",YuGothic,sans-serif;
+  background-color: #F8F8F8;
+
+  @include tab {
+    width: 100vw;
+  }
+
+  #SearchBox {
+    width: 100%;
+    border-radius:5px;
+    margin: 8px 0;
+    text-align: center;
+    height: 44px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: .3s;
+    border: 0;
+  }
+
+
+// --- RankingContainer ---
+
+
+  #RankingContainer {
+    @include SidebarContainer;
+
+    #RankingHeadingWrap {
+      @include SidebarHeadingWrap;
+
+      #RankingHeading {
+        @include SidebarHeading;
+      }
+    }
+
+    #RankingContentWrap {
+      @include SidebarContentWrap;
+
+      .RankingContent {
+        @include SidebarContent;
+      }
+    }
+  }
+
+
+// --- Categorycontainer ---
+
+
+  #Categorycontainer {
+    @include SidebarContainer;
+
+    #CategoryHeadingWrap {
+      @include SidebarHeadingWrap;
+
+      #CategoryHeading {
+        @include SidebarHeading;
+      }
+    }
+
+    #CategoryWrap {
+      @include SidebarContentWrap;
+
+      .CategoryListWrap {
+        padding: 35px 0 20px;
+        &:last-child {
+          padding: 0 0 24px;
+        }
+
+        .CategoryListHeading {
+        font-size: 16px;
+        font-weight: 600;
+        width: 100%;
+        border-bottom: solid 1px #707070;
+        padding: 0 0 0.88vw 9.2%;
+        }
+
+        .CategoryList {
+          margin: 0 auto;
+          display: -webkit-flex;
+          display: -ms-flex;
+          display: flex;
+          flex-wrap: wrap;
+          padding: 19.5px 0 0 3.33vw;
+
+          @include tab {
+            justify-content: space-around;
+          }
+
+          .CategoryItem {
+            padding-bottom: 12px;
+            font-weight: 300;
+            width: 100%;
+
+            @include tab {
+              width: auto;
+            }
+            @include sp {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+// --- RecommendContainer ---
+
+
+  #RecommendContainer {
+    @include SidebarContainer;
+
+    #RecommendHeadingWrap {
+      @include SidebarHeadingWrap;
+
+      #RecommendHeading {
+        @include SidebarHeading;
+      }
+    }
+
+    #RecommendContentWrap {
+      @include SidebarContentWrap;
+
+      .RecommendContent {
+        @include SidebarContent;
+      }
+    }
+  }
+
+
+// --- Tagcontainer ---
+  #Tagcontainer {
+    @include SidebarContainer;
+
+    #TagHeadingWrap {
+      @include SidebarHeadingWrap;
+
+      #TagHeading {
+        @include SidebarHeading;
+      }
+    }
+
+    #TagContentsWrap {
+      @include SidebarContentWrap;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 29px 9.503% 14px;
+
+      .TagItemWrap {
+        background-color: #F3C969;
+        border-radius:5px;
+        width: 48.5%;
+        margin-bottom: 17px;
+        text-align: center;
+
+        &:nth-child(odd) {
+          margin-right: 4px;
+        }
+
+        .TagItem {
+          font-size: 10px;
+          font-weight: 300;
+          color: #fff;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+
+// --- AdvertisementContainer ---
+
+
+  #AdvertisementContainer {
+    @include tab {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-around;
+    }
+    @include sp-small {
+      display: block;
+    }
+
+    #AdvertisementImg-1 {
+      background-image: url(./img/AdobeStock_193998844_Preview.png);
+      width: 250px;
+      height: 195px;
+      margin-bottom: 27px;
+      display: none;
+
+      @include sp-small {
+        margin: 0 auto 27px;
+      }
+    }
+
+    #AdvertisementImg-2 {
+      background-image: url(./img/AdobeStock_121769736_Preview.png);
+      width: 250px;
+      height: 195px;
+      margin-bottom: 36px;
+      display: none;
+
+      @include sp-small {
+        margin: 0 auto 27px;
+      }
+    }
+  }
+
+
+// --- SnsContainer ---
+
+
+  #SnsContainer {
+    padding-bottom: 53px;
+    width: 100%;
+
+    @include tab {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    #FacebookBtn {
+      @include SnsBtn;
+      background-color: #2F5097;
+    }
+
+    #TwitterBtn {
+      @include SnsBtn;
+      background-color: #1A95E0;
+    }
+
+    #GoogleBtn {
+      @include SnsBtn;
+      background-color: #D34836;
+    }
+
+    #RSSfeedBtn {
+      @include SnsBtn;
+      background-color: #FF6600;
+    }
+  }
+
+}
