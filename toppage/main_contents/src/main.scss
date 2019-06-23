@@ -35,6 +35,31 @@ $sp: 657px;
   }
 
 
+@mixin new {
+    font-size: 20px;
+    padding: 30px 0 0 0;
+    font-weight: bold;
+}
+
+@mixin recent {
+    font-size: 14px;
+    padding: 25px 0 30px 0;
+    color: grey;
+    border-bottom: 6px solid grey;
+    width: 1080px;
+}
+
+@mixin navy {
+    height: 6px;
+    width: 310px;
+    background-color:  navy;
+    display: block;
+    position: relative;
+    top: -6px;
+}
+
+
+// 
 
 
 main {
@@ -56,26 +81,15 @@ main {
 
 
     .new {
-        font-size: 20px;
-        padding: 30px 0 0 0;
-        font-weight: bold;
+        @include new;
     }
 
     .recent {
-        font-size: 14px;
-        padding: 25px 0 30px 0;
-        color: grey;
-        border-bottom: 6px solid grey;
-        width: 1120px;
+        @include recent;
     }
 
     .navy {
-        height: 6px;
-        width: 310px;
-        background-color:  navy;
-        display: block;
-        position: relative;
-        top: -6px;
+        @include navy;
     }
 
 
@@ -85,6 +99,10 @@ main {
 @mixin span {
     background-color: grey;
     display: block;
+}
+@mixin hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 
@@ -101,6 +119,10 @@ main {
             height: 333px;
             @include span;
             padding-top: 10px;
+            &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+            }
         }
 
 
@@ -169,6 +191,9 @@ main {
     @mixin contents-span {
         width: 300px;
         height: 200px;
+        &:hover {
+            @include hover;
+        }
     }
 
     @mixin date {
@@ -218,7 +243,7 @@ main {
       display: flex;
       justify-content: space-between;
       padding-left: 30px;
-      @include sp {
+      @include tab {
         display: none;
       }
       width: 1063;
@@ -366,19 +391,26 @@ main {
     padding-left: 30px;
 
     @include sp {
-      padding-top: 100px;
+    //   padding-top: ;
     }
 }
 
+// 上段3つのコーディング
 
-#three-contents {
+
+#onetothree-contents {
+    padding-top: 50px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+
  #one {
-   padding-left: 30px;
+//    padding-left: 30px;
 
-   .three-contents {
+   .three-contents-one {
 
 
-       .contents-span {
+       .contents-span-one {
          @include span;
          @include contents-span;
 
@@ -386,41 +418,280 @@ main {
        }
    }
 
-   .contents-text {
+   .contents-text-one {
 
-    .date {
+    .date-one {
         @include date;
     }
 
-    .real {
+    .real-one {
         @include real;
     }
 
-    .contents {
+    .contents-one {
         @include contents;
     }
 
-    .fact {
+    .fact-one {
         @include fact;
 
-        .life {
-            @include life;
+        .life-one {
+            @include life(35px);
         }
     }
 
-    .more {
+    .more-one {
         @include more;
     }
-
-
    }
 
 
 
  }
 
+ #two {
+     padding: 0 90px;
+   
+    .three-contents-two {
+        .contents-span-two {
+            @include span;
+            @include contents-span;
+        }
+    }
+
+    .contents-text-two {
+
+        .date-two {
+            @include date;
+        }
+
+        .real-two {
+            @include real;
+        }
+
+        .contents-two {
+            @include contents;
+        }
+
+        .fact-two {
+            @include fact;
+
+            .life-two {
+              @include life(35px);
+            }
+        }
+
+        .more-two {
+           @include more;
+        }
+    }
+ }
+
+
+
+
+
+
+
+ #three {
+     .three-contents-three {
+         .contents-span-three {
+             @include span;
+             @include contents-span;
+         }
+     }
+
+     .contents-text-three {
+
+         .date-three {
+             @include date;
+         }
+
+         .real-three {
+             @include real;
+         }
+
+         .contents-three {
+             @include contents;
+         }
+
+         .fact-three {
+             @include fact;
+
+             .life-three {
+                @include life(35px);
+             }
+         }
+
+         .more-three {
+             @include more;
+         }
+     }
+ }
+
+}
+
+// 下段3つのコーディング
+
+#fourtosix {
+    padding-top: 40px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    @include tab {
+       display: none;
+    }
+    
+
+ #four {
+
+  .three-contents-four {
+      .contents-span-four {
+          @include span;
+          @include contents-span;
+      }
+  }
+
+  .contents-text-four {
+
+      .date-four {
+          @include date;
+      }
+
+      .real-four {
+          @include real;
+      }
+
+      .contents-four {
+          @include contents;
+      }
+
+      .fact-four {
+          @include fact;
+
+          .life-four {
+              @include life(35px);
+          }
+      }
+
+      .more-four {
+          @include more;
+      }
+  }
+
+
+ }
+
+
+#five {
+
+    padding: 0 90px;
+
+    .three-contents-five {
+        .contents-span-five {
+            @include span;
+            @include contents-span;
+        }
+    }
+
+    .contents-text-five {
+
+        .date-five {
+            @include date;
+        }
+
+        .real-five {
+            @include real;
+        }
+
+        .contents-five {
+            @include contents;
+        }
+
+        .fact-five {
+            @include fact;
+
+            .life-five {
+                @include life(35px);
+            }
+        }
+
+        .more-five {
+            @include more;
+        }
+    }
+}
+
+
+#six {
+
+    .three-contents-six {
+        .contents-span-six {
+            @include span;
+            @include contents-span;
+        }
+    }
+
+    .contents-text-six {
+
+        .date-six {
+            @include date;
+        }
+
+        .real-six {
+            @include real;
+        }
+
+        .contents-six {
+            @include contents;
+        }
+
+        .fact-six {
+            @include fact;
+
+            .life-six {
+                @include life(35px);
+            }
+        }
+
+        .more-six {
+            @include more;
+        }
+        }
+    }
+}
+
+
+#more-see {
+    height: 58px;
+    width: 256px;
+    position: relative;
+    top: 40px;
+    left: 440px;
+    background-color: navy;
+    margin-bottom: 100px;
+
+    p {
+        position: relative;
+        top: 23px;
+        left: 85px;
+        color: white;
+    }
+}
+
+#title3 {
+padding-left: 30px;
  
 
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -433,10 +704,7 @@ main {
 
 
 
-
-
-
-
-
-
 }
+
+
+
