@@ -293,7 +293,6 @@ $sp-small-2: 400px;
       width: 250px;
       height: 195px;
       margin-bottom: 27px;
-      display: none;
 
       @include sp-small {
         margin: 0 auto 27px;
@@ -305,7 +304,6 @@ $sp-small-2: 400px;
       width: 250px;
       height: 195px;
       margin-bottom: 36px;
-      display: none;
 
       @include sp-small {
         margin: 0 auto 27px;

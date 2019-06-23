@@ -15,8 +15,8 @@
     "webpack-dev-server": "^3.5.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --open-page",
-    "build": "webpack --config webpack.config.js"
+    "start": "webpack-dev-server --open --open-page index.html",
+    "build": "webpack --config webpack.config.js --watch"
   },
   "dependencies": {
     "jquery": "^3.4.1"

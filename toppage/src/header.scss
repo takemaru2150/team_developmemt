@@ -23,9 +23,9 @@ $header-height: 60px;
 header {
   width: 100%;
   height: $header-height;
-  @include tab {
-    width: 100vw;
-  }
+  // @include tab {
+  //   width: 100vw;
+  // }
 
   #HeaderWrapper {
     display: -webkit-flex;
