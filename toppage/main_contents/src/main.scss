@@ -570,7 +570,7 @@ main {
           @include fact;
 
           .life-four {
-              @include life(35px);
+              @include life(25px);
           }
       }
 
